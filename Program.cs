@@ -11,28 +11,25 @@ namespace ConsoleApp8
         static void Main(string[] args)
         {
             int num, x, y;
-            Console.Write("Enter the height of the triangle: ");
+            Console.Write("Enter a number to create a reverse triangle!: ");
             num = Convert.ToInt32(Console.ReadLine());
 
             for (y = 1; y <= num; y++)
             {
-                for (x = 1; x <= y; x++)
+                for (x = 1; x <= num; x++)
                 {
-                    Console.Write("* ");
-                }
-                for (x = y + 1; x <= num; x++)
-                {
-                    Console.Write("_ ");
+                    if (x <= y)
+                    {
+                        Console.Write("* ");
+                    }
+                    else
+                    {
+                        Console.Write("_ ");
+                    }
                 }
                 Console.WriteLine();
             }
             Console.ReadKey();
         }
-
-
-
-
-
-
     }
 }
